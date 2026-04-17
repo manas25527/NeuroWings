@@ -5,34 +5,43 @@
 
 import { SplineSceneBasic } from "@/components/ui/demo";
 import { Navbar } from "@/components/ui/navbar";
-import DemoOne from "@/components/ui/feature-demo";
 import { Footer } from "@/components/ui/footer-section";
 import { FlyingDrone } from "@/components/ui/flying-drone";
+import { AboutSection } from "@/components/ui/about-section";
+import { ProductsSection } from "@/components/ui/products-section";
+import { ServicesSection } from "@/components/ui/services-section";
+import { SchemesSection } from "@/components/ui/schemes-section";
+import { CertificationsSection } from "@/components/ui/certifications-section";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-blue-200 selection:text-blue-900 flex flex-col items-center relative overflow-x-hidden font-sans">
+    <div className="min-h-screen bg-[#f4f7ff] text-blue-950 selection:bg-blue-300 selection:text-blue-900 flex flex-col items-center relative overflow-x-hidden font-sans">
       <FlyingDrone />
       
       {/* Premium Background Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.08)_0%,transparent_70%)]" />
-        <div className="absolute top-0 left-0 right-0 h-[500px] bg-gradient-to-b from-blue-50/50 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(37,99,235,0.12)_0%,transparent_70%)]" />
+        <div className="absolute top-0 left-0 right-0 h-[600px] bg-gradient-to-b from-blue-100/60 via-blue-50/30 to-transparent" />
       </div>
 
       <Navbar />
       
       <main className="w-full flex flex-col items-center relative z-10">
-        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-16 md:pt-40 md:pb-24">
+        <div id="home" className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 pt-32 pb-16 md:pt-40 md:pb-24">
           <SplineSceneBasic />
         </div>
         
-        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <DemoOne />
-        </div>
+        <div id="about" className="w-full"><AboutSection /></div>
+        <div id="products" className="w-full"><ProductsSection /></div>
+        <div id="services" className="w-full"><ServicesSection /></div>
+        <div id="industries" className="w-full"><SchemesSection /></div>
+        <CertificationsSection />
+        
+        
+
       </main>
 
-      <Footer />
+      <div id="contact" className="w-full"><Footer /></div>
     </div>
   );
 }

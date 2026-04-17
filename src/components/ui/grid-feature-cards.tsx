@@ -15,7 +15,7 @@ export function FeatureCard({ feature, className, ...props }: FeatureCardProps) 
 	const p = genRandomPattern();
 
 	return (
-		<div className={cn('group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-500 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5', className)} {...props}>
+		<div className={cn('group relative overflow-hidden rounded-3xl border border-blue-100 bg-white p-8 transition-all duration-500 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-900/5', className)} {...props}>
 			{/* Hover Gradient Background */}
 			<div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 			
@@ -38,8 +38,8 @@ export function FeatureCard({ feature, className, ...props }: FeatureCardProps) 
 				<div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 border border-blue-100 group-hover:bg-blue-100 group-hover:scale-110 transition-all duration-500">
 					<feature.icon className="text-blue-600 size-6" strokeWidth={1.5} aria-hidden />
 				</div>
-				<h3 className="text-xl font-semibold text-slate-900 tracking-tight">{feature.title}</h3>
-				<p className="text-slate-600 mt-3 text-sm leading-relaxed font-light">{feature.description}</p>
+				<h3 className="text-xl font-semibold text-blue-950 tracking-tight">{feature.title}</h3>
+				<p className="text-blue-900/80 mt-3 text-sm leading-relaxed font-light">{feature.description}</p>
 			</div>
 		</div>
 	);

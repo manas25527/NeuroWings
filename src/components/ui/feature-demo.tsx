@@ -47,10 +47,10 @@ export default function DemoOne() {
 						<Sparkles className="w-4 h-4 mr-2 text-blue-600" />
 						Core Features
 					</div>
-					<h2 className="text-4xl font-extrabold tracking-tight text-balance md:text-5xl lg:text-6xl text-slate-900">
+					<h2 className="text-4xl font-extrabold tracking-tight text-balance md:text-5xl lg:text-6xl text-blue-950">
 						Power. Speed. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Control.</span>
 					</h2>
-					<p className="text-slate-600 mt-6 text-base md:text-lg tracking-wide text-balance max-w-2xl mx-auto font-light leading-relaxed">
+					<p className="text-blue-900/80 mt-6 text-base md:text-lg tracking-wide text-balance max-w-2xl mx-auto font-light leading-relaxed">
 						A powerful foundation designed to help you build fast, scalable, and interactive web experiences without compromising on design.
 					</p>
 				</AnimatedContainer>

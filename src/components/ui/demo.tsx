@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react"
  
 export function SplineSceneBasic() {
   return (
-    <div className="w-full min-h-[700px] md:min-h-[600px] md:h-[600px] relative overflow-hidden flex flex-col md:flex-row rounded-3xl border border-slate-200 bg-white shadow-2xl shadow-blue-900/5">
+    <div className="w-full min-h-[700px] md:min-h-[600px] md:h-[600px] relative overflow-hidden flex flex-col md:flex-row rounded-3xl border border-blue-100 bg-white/60 backdrop-blur-md shadow-2xl shadow-blue-900/10">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20 opacity-50"
         fill="rgb(59, 130, 246)"
@@ -20,21 +20,12 @@ export function SplineSceneBasic() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-slate-900 via-slate-800 to-slate-600 tracking-tight leading-[1.1]"
+            className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-blue-950 via-blue-900 to-blue-700 tracking-tight leading-[1.1]"
           >
             AI-powered Forensic<br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Intelligence, Security Systems</span><br className="hidden md:block" />
             & digital innovation
           </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="mt-6 text-slate-600 max-w-[280px] sm:max-w-[320px] md:max-w-lg text-[15px] md:text-lg leading-relaxed font-light"
-          >
-            Build modern, high-converting websites with an interactive 3D hero that responds to user movement — perfect for AI products, SaaS platforms, and futuristic brands.
-          </motion.p>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -43,18 +34,18 @@ export function SplineSceneBasic() {
             className="mt-10 flex flex-col sm:flex-row items-center gap-4"
           >
             <button className="group relative inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-medium text-white bg-blue-600 rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(37,99,235,0.3)]">
-              <span className="relative z-10">Start Building</span>
+              <span className="relative z-10">Explore products</span>
               <ArrowRight className="relative z-10 size-4 transition-transform group-hover:translate-x-1" />
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
-            <button className="px-8 py-3.5 text-sm font-medium text-slate-700 bg-white rounded-full border border-slate-200 hover:bg-slate-50 transition-colors">
-              View Documentation
+            <button className="px-8 py-3.5 text-sm font-medium text-blue-900 bg-white/80 rounded-full border border-blue-200 hover:bg-blue-50 transition-colors shadow-sm">
+              Talk to our experts
             </button>
           </motion.div>
         </div>
 
         {/* Right content */}
-        <div className="flex-1 relative min-h-[450px] sm:min-h-[500px] md:min-h-0">
+        <div className="flex-1 relative min-h-[450px] sm:min-h-[500px] md:min-h-0 pointer-events-none md:pointer-events-auto">
           <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent z-10 pointer-events-none md:hidden" />
           <SplineScene 
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"

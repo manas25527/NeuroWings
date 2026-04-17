@@ -67,7 +67,7 @@ export function FlyingDrone() {
   if (!isMounted) return null;
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-[100] perspective-1000 overflow-hidden flex items-center justify-center">
+    <div className="hidden md:flex fixed inset-0 pointer-events-none z-[100] perspective-1000 overflow-hidden items-center justify-center">
       <motion.div
         className="w-[200px] h-[200px] md:w-[350px] md:h-[350px] relative"
         style={{
