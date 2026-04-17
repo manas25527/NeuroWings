@@ -31,7 +31,7 @@ export function ProductsSection() {
             <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 to-transparent pointer-events-none" />
             
             <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
-                <AnimatedContainer className="max-w-3xl mb-16">
+                <AnimatedContainer className="max-w-3xl mx-auto mb-16 text-center">
                     <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-blue-950 mb-6 leading-tight">
                         Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Products</span>
                     </h2>
