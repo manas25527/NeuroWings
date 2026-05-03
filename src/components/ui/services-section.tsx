@@ -31,15 +31,15 @@ const services = [
 
 export function ServicesSection() {
     return (
-        <section className="py-20 md:py-32 w-full relative z-10 bg-blue-50/40">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-50/20 pointer-events-none" />
+        <section className="py-20 md:py-32 w-full relative z-10 bg-blue-50/40 dark:bg-slate-900/30">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-50/20 dark:to-slate-900/10 pointer-events-none" />
             
             <div className="mx-auto w-full max-w-[95rem] px-4 sm:px-6 lg:px-8 relative z-10">
                 <AnimatedContainer className="max-w-3xl mx-auto mb-12 text-center">
-                    <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-blue-950 mb-6 leading-tight">
-                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Services</span>
+                    <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-blue-950 dark:text-white mb-6 leading-tight">
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-400">Services</span>
                     </h2>
-                    <p className="text-blue-900/80 text-lg md:text-xl font-light leading-relaxed">
+                    <p className="text-blue-900/80 dark:text-slate-300 text-lg md:text-xl font-light leading-relaxed">
                         End-to-end security consulting and technical services to protect your digital assets.
                     </p>
                 </AnimatedContainer>
@@ -55,12 +55,12 @@ export function ServicesSection() {
                                 <AnimatedContainer 
                                     key={index}
                                     delay={0.1 + (index * 0.1)} 
-                                    className="flex flex-col rounded-[2rem] bg-white border border-blue-100 shadow-lg shadow-blue-200/50 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 overflow-hidden group"
+                                    className="flex flex-col rounded-[2rem] bg-white dark:bg-slate-800/80 border border-blue-100 dark:border-slate-700 shadow-lg shadow-blue-200/50 dark:shadow-black/20 hover:shadow-2xl hover:shadow-blue-900/10 dark:hover:shadow-black/30 transition-all duration-300 overflow-hidden group"
                                 >
                                     {/* Image Placeholder Section */}
-                                    <div className="relative w-full aspect-[16/10] bg-slate-100 overflow-hidden">
-                                        <div className="absolute inset-0 flex flex-col items-center justify-center text-blue-300 bg-gradient-to-br from-[#f0f5ff] to-blue-100 group-hover:scale-105 transition-transform duration-700">
-                                            <svg className="w-10 h-10 mb-2 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <div className="relative w-full aspect-[16/10] bg-slate-100 dark:bg-slate-700 overflow-hidden">
+                                        <div className="absolute inset-0 flex flex-col items-center justify-center text-blue-300 dark:text-slate-400 bg-gradient-to-br from-[#f0f5ff] dark:from-slate-700 to-blue-100 dark:to-slate-800 group-hover:scale-105 transition-transform duration-700">
+                                            <svg className="w-10 h-10 mb-2 text-blue-200 dark:text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                             </svg>
                                             <span className="font-semibold text-[10px] tracking-widest uppercase opacity-70">Image Space</span>
@@ -69,12 +69,12 @@ export function ServicesSection() {
 
                                     {/* Card Content */}
                                     <div className="p-6 md:p-8 flex-1 flex flex-col">
-                                        <h3 className="text-xl font-bold text-blue-950 mb-3">{service.title}</h3>
-                                        <p className="text-blue-900/80 font-light text-[15px] leading-relaxed mb-6 flex-1">
+                                        <h3 className="text-xl font-bold text-blue-950 dark:text-white mb-3">{service.title}</h3>
+                                        <p className="text-blue-900/80 dark:text-slate-300 font-light text-[15px] leading-relaxed mb-6 flex-1">
                                             {service.description}
                                         </p>
                                         
-                                        <button className="mt-auto inline-flex items-center text-sm font-medium text-blue-600 group/btn w-fit">
+                                        <button className="mt-auto inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 group/btn w-fit">
                                             Learn more
                                             <svg className="ml-2 w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -90,9 +90,9 @@ export function ServicesSection() {
                     <div className="relative mt-12 xl:mt-0 xl:pl-8">
                         {/* Sticky container so it stays in view while scrolling past the 6 cards */}
                         <div className="sticky top-32">
-                            <AnimatedContainer delay={0.4} className="bg-blue-600 rounded-[2.5rem] p-8 sm:p-10 lg:p-12 shadow-2xl text-white relative overflow-hidden group">
+                            <AnimatedContainer delay={0.4} className="bg-blue-600 dark:bg-blue-700 rounded-[2.5rem] p-8 sm:p-10 lg:p-12 shadow-2xl text-white relative overflow-hidden group">
                                 {/* Decorative background element */}
-                                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-blue-500 rounded-full blur-3xl opacity-50 transition-transform duration-1000 group-hover:scale-110" />
+                                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-blue-500 dark:bg-blue-600 rounded-full blur-3xl opacity-50 transition-transform duration-1000 group-hover:scale-110" />
                                 
                                 <div className="relative z-10">
                                     <h3 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Why Choose Us?</h3>
