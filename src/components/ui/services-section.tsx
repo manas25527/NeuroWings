@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
+import { PenTestIllustration, ThreatIntelIllustration, DigitalForensicsIllustration, ComplianceIllustration, AIThreatDetectionIllustration, SecurityArchitectureIllustration, DefaultServiceVisual } from './service-illustrations';
 
 const services = [
     {
@@ -58,14 +59,13 @@ export function ServicesSection() {
                                     className="flex flex-col rounded-[2rem] bg-white dark:bg-slate-800/80 border border-blue-100 dark:border-slate-700 shadow-lg shadow-blue-200/50 dark:shadow-black/20 hover:shadow-2xl hover:shadow-blue-900/10 dark:hover:shadow-black/30 transition-all duration-300 overflow-hidden group"
                                 >
                                     {/* Image Placeholder Section */}
-                                    <div className="relative w-full aspect-[16/10] bg-slate-100 dark:bg-slate-700 overflow-hidden">
-                                        <div className="absolute inset-0 flex flex-col items-center justify-center text-blue-300 dark:text-slate-400 bg-gradient-to-br from-[#f0f5ff] dark:from-slate-700 to-blue-100 dark:to-slate-800 group-hover:scale-105 transition-transform duration-700">
-                                            <svg className="w-10 h-10 mb-2 text-blue-200 dark:text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                            </svg>
-                                            <span className="font-semibold text-[10px] tracking-widest uppercase opacity-70">Image Space</span>
-                                        </div>
-                                    </div>
+                                    {service.title === 'Penetration Testing' ? <PenTestIllustration /> :
+                                     service.title === 'Threat Intelligence' ? <ThreatIntelIllustration /> :
+                                     service.title === 'Digital Forensics' ? <DigitalForensicsIllustration /> :
+                                     service.title === 'Compliance Consulting' ? <ComplianceIllustration /> :
+                                     service.title === 'AI Threat Detection' ? <AIThreatDetectionIllustration /> :
+                                     service.title === 'Security Architecture' ? <SecurityArchitectureIllustration /> :
+                                     <DefaultServiceVisual />}
 
                                     {/* Card Content */}
                                     <div className="p-6 md:p-8 flex-1 flex flex-col">

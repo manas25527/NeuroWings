@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
+import { MakeInIndiaIllustration, DefaultSchemeVisual } from './scheme-illustrations';
 
 const schemes = [
     {
@@ -51,15 +52,8 @@ export function SchemesSection() {
                             delay={0.1 + (index * 0.1)} 
                             className="flex flex-col rounded-[2rem] bg-blue-50/40 dark:bg-slate-800/60 border border-blue-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:shadow-blue-900/5 dark:hover:shadow-black/20 transition-all duration-300 overflow-hidden group"
                         >
-                            {/* Image Placeholder Section */}
-                            <div className="relative w-full aspect-[4/3] bg-white dark:bg-slate-700 overflow-hidden">
-                                <div className="absolute inset-0 flex flex-col items-center justify-center text-blue-300 dark:text-slate-400 bg-gradient-to-br from-blue-50 dark:from-slate-700 to-[#f0f5ff] dark:to-slate-800 group-hover:scale-105 transition-transform duration-700">
-                                    <svg className="w-10 h-10 mb-2 text-blue-200 dark:text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
-                                    </svg>
-                                    <span className="font-semibold text-[10px] tracking-widest uppercase opacity-70">Image Space</span>
-                                </div>
-                            </div>
+                            {/* Image Section */}
+                            {scheme.title === 'Make in India' ? <MakeInIndiaIllustration /> : <DefaultSchemeVisual />}
 
                             {/* Card Content */}
                             <div className="p-6 md:p-8 flex-1 flex flex-col">
